@@ -12,7 +12,7 @@ This simulation package runs using C++, and therefore requires an appropriate co
 
     cmake ./
     make
-    ./bin/MC_simulation
+    ./MC_simulation
 
 Note that this can vary based on your setup.
 
