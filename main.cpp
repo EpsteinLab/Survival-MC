@@ -22,9 +22,9 @@ using namespace std;
 int main()
 {
 ///////////////////////////////////////////////////////////////////////////////////////////////
-    // Please change the path to the destination of "Simulations" folder
+    // Please change the path to where you want to store simulations
     // This MUST be done to get output .csv files
-    std::string saveSim = "/home/chris/projects/MC_simulations_Ponly/Simulations";
+    std::string saveSim = "/file/path/to/folder/of/Simulations";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
