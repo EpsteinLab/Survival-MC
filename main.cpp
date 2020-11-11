@@ -51,7 +51,7 @@ int main()
                 // There is no noticeable change if the number is increased above 10^7, though the simulations take much longer.
                 // Below 10^7 the simulations begin to get messy/don't settle into stable patterns
     unsigned long long int growSteps = stepsPerGrowth * r; //Number of MC steps - these settings grow the lattice to a square
-    unsigned long long int imgPerSim = growSteps / 100; //Number of .csv simulation files exported
+    unsigned long long int imgPerSim = growSteps / 1000; //Number of .csv simulation files exported
     unsigned long long int endSteps = 0 * stepsPerGrowth; //Allows for simulation to carry on past the end of the growth
     unsigned long long int beginSteps = 0 * stepsPerGrowth; //Allows for simulation to iterate before growth begins
 
