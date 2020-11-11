@@ -1,4 +1,4 @@
-# MC_Simulation
+# Survival-MC
 
 Developed by Christopher Konow and Ziyao Li
 
