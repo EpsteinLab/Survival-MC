@@ -31,12 +31,10 @@ void Neighbor::GeneratePeriodic() {
             }
         }
     }
-    else if ((lrshift == 0) && (udshift != 0)) {  // Note: For right now, I'm not sure if this works with anything but a +/- 1 for udshift
-    // Also note: in its current form, a column with only one element will become its own neighbor. Not sure if I care, but worth noting
+    else if ((lrshift == 0) && (udshift != 0)) {
         if (array.size() != 1){
             for (int i = 0; i < rows; ++ i) {
                 for (int j = 0; j < array[i].size(); ++j) {
-//                    unsigned int multiplier = 1; 
                     int idx2test = i + udshift;
                     if (checkExist(idx2test, j) == true) { //if it's a valid array point
                         array[i][j] = idx2test;
@@ -44,13 +42,10 @@ void Neighbor::GeneratePeriodic() {
                         while (checkExist(idx2test, j) == false) {
                             if (idx2test < 0) {  // circles back to bottom row of the array
                                 idx2test = rows - 1;
-//                                multiplier = 1;
                             }
                             else if (idx2test > rows - 1) {  // circles back to 0th row of array
                                 idx2test = idx2test % rows;
-//                                multiplier = 1;
                             } else {
-//                                multiplier = multiplier + 1;
                                 idx2test = idx2test + udshift;
                             }
                         }
@@ -83,9 +78,6 @@ void Neighbor::grow1D(bool extend) {
         array[i].push_back(0);
     }
     cols = cols+1;
-//   if (cols != array[0].size()){
-//        cout << "Error in column indexing" << endl;
-//    }
     
     //Re-generate new values
     GeneratePeriodic();
